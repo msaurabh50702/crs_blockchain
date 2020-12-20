@@ -1,4 +1,4 @@
-# Curruption  Reduction System using Blockchain Technology
+# Corruption  Reduction System using Blockchain Technology
 
 Curruption  Reduction System using Blockchain Technology is a webportal that allow government to manage the project activities and tracking the progress of the projects. 
 System is based on the Blockchain technology. it deployed on etherium blochain network 
@@ -9,7 +9,7 @@ System is based on the Blockchain technology. it deployed on etherium blochain n
 * NodeJs - For the webserver 
 * Web3 Js - To connect the blockchain to nodejs
 * MongoDB - for managing dtabase
-* Tailwind CSS - great UI boilerplate for modern web apps
+* Halfmoon CSS Framework - Halfmoon is a responsive front-end framework that is great for building dashboards and tools.
 * PassportJs - For Authentication Purpose
 * Ejs - for rendering the webpage (template engine)
 

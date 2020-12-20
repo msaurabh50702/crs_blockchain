@@ -1,31 +1,71 @@
 
 body,html {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Spectral';
     -webkit-font-smoothing: antialiased;
-    background-color: #F8F8F8;
+    background-color: #feffdc;
     /* $primary: #FE5F1E;
     $primary-hover: #b23301;
     $secondary: #F8F8F8;
     $pure: #fff;
     $dark: #232323;
     $gray: #ccc; */
+    
 }
 
 .header {
-    background-color: #fff;
+    background-color: #ffae00;
 }
 
 li > a:hover {
     color: #b23301;
 }
 
-footer {
-    background-color: #FE5F1E;
-    color : white;
+footer{
     position: fixed;
+    bottom:0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    bottom:0
 }
 
+.orange {
+    background-color: #FE5F1E;
+    width: 100%;
+    justify-content: center;
+    height: 22px;
+}
+.green {
+    background-color: #06ff2f;
+    width: 100%;
+    justify-content: center;
+    height:5px;
+}
+.white{
+        background-color: white;
+        width: 100%;
+        justify-content: center;
+        height: 5px;
+
+}
+.ftext{
+    text-shadow: 2px 2px 4px rgb(95, 150, 253);
+    color:white;
+}
+
+.notification_window{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    font-size: 20px;
+    height: 350px;
+}
+
+.marquee {
+    width: 300px;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  #qt{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 380px;
+  }

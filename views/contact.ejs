@@ -4,18 +4,24 @@
 <%if (messages.error) { %>
     <script>toastAlert("Error", "<%= messages.error %>", "alert-danger");</script>
 <% } %>
+<%if (messages.warning) { %>
+    <script>toastAlert("Warning", "<%= messages.warning %>", "alert-secondary");</script>
+<% } %>
+<%if (messages.infos) { %>
+    <script>toastAlert("Information", "<%= messages.infos %>", "alert-primary");</script>
+<% } %>
 <center>
     <div class="w-550 mw-full">
         <div class="card p-0 shadow-lg">
             <!-- Card header -->
             <div class="px-card py-10 border-bottom">
                 <h2 class="card-title font-size-24 font-weight-bold m-0 text-center text-smoothing-antialiased-lm" style="color:rgb(253, 1, 35);">
-                    Register
+                    Contact us
                 </h2>
             </div>
             <!-- Content -->
             <div class="content">
-                <form method="POST" action="/register">
+                <form method="POST" action="/contact">
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
@@ -39,26 +45,6 @@
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <i class="fa fa-key" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <input type="password" name="password1" class="form-control" placeholder="Password"
-                            required="required">
-                    </div>
-
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fa fa-key" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <input type="password" name="password2" class="form-control" placeholder="Confirm password"
-                            required="required">
-                    </div>
-
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
                                 <i class="fa fa-mobile-phone" aria-hidden="true"></i>
                             </span>
                         </div>
@@ -69,38 +55,25 @@
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
-                                <i class="fa fa-address-card-o" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                        <select class="form-control" name="accountType">
-                            <option value="" selected="selected" disabled="disabled">Account Type</option>
-                            <option value="contractor">Contractor</option>
-                            <option value="vendor">Vendor</option>
-                            <option value="developer">Developer</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
                                 <i class="fa fa-child" aria-hidden="true"></i>
                             </span>
                         </div>
-                        <input type="number" name="age" class="form-control" placeholder="Age"
-                            required="required">
+                        <textarea class="form-control" name="query" placeholder="Query"></textarea>
                     </div>
-
-                    
-
-                    
-                    <input class="btn btn-primary btn-block" type="submit" value="Register">
+                    <input class="btn btn-primary btn-block" type="submit" value="Register query">
                 </form>
             </div>
             <!-- Card footer -->
             <div class="px-card py-10 bg-light-lm bg-very-dark-dm rounded-bottom">
-                <p class="font-size-12 m-0" style="text-align: center;">
-                    Already  Account? <a href="login" class="">Login here</a>
-                </p>
+                <form action="QueryStatus" method="get" class="form-inline">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Track Query</span>
+                      </div>
+                      <input type="text" class="form-control" name="tokens" placeholder="Enter Tokens" required id="if-2-income">
+                    </div>
+                    <button class="btn btn-primary">Track</button>
+                </form>
             </div>
         </div>
     </div>

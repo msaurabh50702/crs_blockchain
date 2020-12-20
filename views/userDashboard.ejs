@@ -1,0 +1,10 @@
+<%if (messages.success) { %>
+    <script>toastAlert("Success", "<%= messages.success %>", "alert-success");</script>
+<% } %>
+<%if (messages.error) { %>
+    <script>toastAlert("Error", "<%= messages.error %>", "alert-danger");</script>
+<% } %>
+
+<script>
+    document.getElementById("userRole").innerHTML = "<%= userRole %>"
+</script>
